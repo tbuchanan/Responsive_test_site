@@ -1,0 +1,163 @@
+<html>
+<head>
+	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Continu</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="stylesheet" href="css/ss-gizmo.css" type="text/css">
+	<script src="http://code.jquery.com/jquery-latest.min.js"
+        type="text/javascript"></script>
+
+</head>
+<body>
+<div id="wrapper">
+	<div class="header">
+		<span class="logo"><a href="#"><img src="img/logo.png"></a></span>
+		<span class="burger-logo"><a href="#"><img src="img/burger-icon.png"></a></span>
+		<span class="ss-notifications"></span>
+		<span class="alert">2</span>
+	</div>
+
+	<div class="side-nav">
+		<ul>
+			<li><a href="#/home" class="ss-home"></a></li></br>
+			<li><a href="#/timeline" class="ss-clock"></a></li></br>
+			<li><a href="#/user" class="ss-user"></a></li></br>
+			<li><a href="#/help" class="ss-help"></a></li></br>
+			<li><a href="#/logout" class="ss-logout"></a></li>
+		</ul>
+	</div>
+
+	<div class="side-nav-mobile">
+		<ul>
+			<li><a href="#/home" class="ss-home"></a>
+					<a href="#/home" class="ss-home-mobile list-margin">Explore</a>
+			</li></br>
+			<li><a href="#/timeline" class="ss-clock"></a>
+					<a href="#/home" class="ss-home-mobile list-margin">Archive</a>
+			</li></br>
+			<li><a href="#/user" class="ss-user"></a>
+					<a href="#/home" class="ss-home-mobile list-margin">Admin</a>
+			</li></br>
+			<li><a href="#/help" class="ss-help help"></a>
+					<a href="#/home" class="ss-home-mobile list-margin">Help</a>
+			</li></br>
+		</ul>
+	</div>
+
+	<section class="your-timeline">
+		<h2>Your Timeline</h2>
+		<div id="content-box">
+			<div class="column1">
+				<span class="content-timeline"><i>1 hr ago</i></span>
+				<span class="content-timeline"><i>1 day ago</i></span>
+				<span class="content-timeline"><i>2 days ago</i></span>
+				<span class="content-timeline"><i>3 days ago</i></span>
+				<span class="content-timeline"><i>4 days ago</i></span>
+				<span class="content-timeline"><i>10 days ago</i></span>
+			</div>
+
+			<div class="column2">
+				<object id="border-line">
+					<span class="ss-file"></span></br>
+					<span class="green-circle"></span></br>
+					<span class="ss-file"></span></br>
+					<span class="ss-video"></span></br>
+					<span class="ss-alert"></span></br>
+					<span class="orange-circle"></span>
+			</object>
+			</div>
+
+			<div class="column3">
+				<span class="event">
+					<p id="first">
+						You read the article <b>"Leadership in the 2000's"</b>
+					</p>
+				</span>
+				<span class="event">
+					<p id="second">
+						<b>You signed up for </b><a href="#">Blogging with Seth Godin</a>
+						The class will take place on <b>8/15/14</b>
+					</p>
+				</span>	
+				<span class="event">
+					<p id="third">
+						You read the article <b>"Change is Good--But First, Know What Should Never Change"</b>
+					</p>
+				</span>	
+				<span class="event">
+					<p id="fourth">
+						You watched the video <b>"Conflict Resolution"</b>
+					</p>
+				</span>	
+				<span class="event">				
+					<p id="fifth">
+						<object id="mandatory">MANDATORY</object></br>
+						Jen Simpson has sent you a mandatory event to attend <a href="#">PCI Compliance Training</a> on <b>6/28/14 at 7:00pm</b>
+					</p>
+				</span>	
+				<span class="event">
+					<p id="sixth">
+						<object id="new">NEW</object></br>
+						There's a new event that matches with your interests that was just posted: <a href="#">Sipping Fine Wine</a> on <b>8/21/14 at 7:00pm</b>
+					</p>
+				</span>			
+			</div>
+		</div><!-- content-box -->
+	</section>
+
+	<section class="saved-content">
+		<h2>Saved Content</h2>
+		<article class="first-saved ss-file">
+			<a href="#">How to Retain Good Employees<span class="content-time"></br><i>1 day ago</i></span></a>
+		</article>
+
+		<article class="first-saved-custom">
+			<span class="ss-video"></span>
+			<a href="#"><span class="break">Do I really Need a Team? Ask these 6 Questions</span></br><span class="content-video"><i>2 days ago</i></span></a>
+		</article>
+
+		<article class="first-saved ss-video">
+			<a href="#">Authentic Leadership<span class="content-video2"></br><i>2 days ago</i></span></a>
+		</article>
+
+		<article class="first-saved ss-video">
+			<a href="#">Ken Blanchard - Clear Goals<span class="content-video3"></br><i>2 days ago</i></span></a>
+		</article>
+
+		<article class="first-saved ss-file">
+			<a href="#">It's All About Empowered People<span class="content-time2"></br><i>3 days ago</i></span></a>
+		</article>
+	</section>
+
+<script>
+$(document).ready(function(){
+
+	$('.burger-logo').click(function(){
+		$('.side-nav').toggle();
+	});
+
+	$('.side-nav-mobile').hide();
+	$('.burger-logo').click(function(){
+		$('.side-nav-mobile').toggle();
+	});
+	
+	$(window).resize(function() {
+  	if ($(window).width() < 801) {
+    	$('.side-nav').hide();
+  	}
+  	else {
+      $('.side-nav').show();
+  	}
+ 		if (($(window).width() > 500) && ($(window).width() < 801)) {
+    	$('.side-nav-mobile').hide();
+  	}
+
+	});
+
+
+
+});
+</script>
+<div id="wrapper">
+</body>
+</html>
